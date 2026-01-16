@@ -26,5 +26,4 @@ services:
 
 volumes:
   pgdata:
-    name: /var/lib/postgresql/data
 
