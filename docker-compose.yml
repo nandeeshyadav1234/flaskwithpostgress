@@ -16,6 +16,7 @@ services:
   db:
     image: postgres:16
     container_name: postgres_db
+    command: ["postgres", "-c", "logging_collector=on", "-c", "log_directory=log"]
     env_file:
       - .env
     volumes:
@@ -25,5 +26,5 @@ services:
 
 volumes:
   pgdata:
-    name: pgdata
+    name: /var/lib/postgresql/data
 
